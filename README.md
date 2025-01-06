@@ -1,6 +1,7 @@
 # Simulation
 
-## Setup
+## Nix Setup
 
-1. Create a virtual environment: `python -m venv .venv`
-2. Install the dependencies: `pip install -r requirements.txt`
+1. `nix-shell -p python312Packages.pygame`
+2. Change directory to the root of Simulation
+3. `python3 sims/skeleton.py`
