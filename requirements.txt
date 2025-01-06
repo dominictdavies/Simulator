@@ -1,0 +1,1 @@
+python312Packages.pygame
