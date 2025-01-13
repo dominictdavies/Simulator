@@ -1,4 +1,4 @@
-# Simulation
+# Simulator
 
 ## Nix Setup
 
