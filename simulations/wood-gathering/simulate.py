@@ -1,8 +1,6 @@
 import pygame
 from pygame.locals import *
-from player import Player
-from tree import Tree
-from cart import Cart
+from entities import Player, Tree, Cart
 
 
 def main():

@@ -11,7 +11,7 @@ class Player:
         move_speed: float = 1.0,
         chop_speed: float = 1.0,
         inventory_size: int = 10,
-        inventory: list[Item] = []
+        inventory: list[Item] = [],
     ):
         self.position = position
         self.velocity = velocity
@@ -28,3 +28,22 @@ class Player:
     def draw(self, screen):
         white = (255, 255, 255)
         pygame.draw.circle(screen, white, self.position, 10)
+
+
+class Tree:
+    def __init__(self, position: list[float, float], life: int, wood: int):
+        self.position = position
+        self.life = life
+        self.wood = wood
+
+
+class Cart:
+    def __init__(
+        self,
+        position: list[float, float],
+        inventory_size: int,
+        inventory: list[Item] = [],
+    ):
+        self.position = position
+        self.inventory_size = inventory_size
+        self.inventory = inventory
