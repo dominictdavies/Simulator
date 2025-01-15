@@ -21,7 +21,7 @@ class Player:
         self.inventory = inventory
 
     def ai(self):
-        self.velocity = (random.randint(-25, 25), random.randint(-25, 25))
+        self.velocity = (random.randint(-15, 15), random.randint(-15, 15))
         self.position[0] += self.velocity[0]
         self.position[1] += self.velocity[1]
 
