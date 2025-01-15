@@ -1,31 +1,40 @@
 import pygame
 from pygame.locals import *
+from player import Player
+from tree import Tree
+from cart import Cart
 
 
-# Main loop
 def main():
-    # Initialize Pygame
+    # PyGame initialisation
     pygame.init()
 
-    # Screen dimensions
+    # Display configuration
     width, height = 1920, 1080
     screen = pygame.display.set_mode((width, height))
     pygame.display.set_caption("Wood Gathering")
 
-    # Colors
-    black = (0, 0, 0)
-    white = (255, 255, 255)
+    # Entity sets
+    players: list[Player] = []
+    trees: list[Tree] = []
+    carts: list[Cart] = []
 
+    # Game loop
     while True:
+        # Allow the application to be closed
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
 
-        # Fill screen
-        screen.fill(black)
-        pygame.draw.circle(screen, white, (width // 2, height // 2), 10)
+        # Update
+        players.append(Player([width / 2, height / 2]))
+        for player in players:
+            player.ai()
 
-        # Update display
+        # Draw
+        screen.fill((0, 0, 0))
+        for player in players:
+            player.draw(screen)
         pygame.display.update()
 
 
