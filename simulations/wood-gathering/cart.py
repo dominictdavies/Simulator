@@ -4,7 +4,7 @@ from item import Item
 class Cart:
     def __init__(
         self,
-        position: tuple[float, float],
+        position: list[float, float],
         inventory_size: int,
         inventory: list[Item] = [],
     ):
